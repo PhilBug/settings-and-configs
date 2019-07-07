@@ -44,10 +44,10 @@ function install_zsh() {
   git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-  echo "plugins = (git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)" >> ~/.zshrc
+  echo "plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)" >> ~/.zshrc
 }
 
 function install_brew() {
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 }
 
